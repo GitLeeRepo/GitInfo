@@ -1,5 +1,6 @@
-# Create an alias named origin
+# Create an alias named origin and push to it
 git remote add origin https://github.com/Traeken/PythonSandbox.git
+
 git push -u origin master
 
 # The above push is the same as:
