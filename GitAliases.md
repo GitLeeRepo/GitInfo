@@ -13,6 +13,9 @@ git remote -v
 # Rename an alias
 git remote rename origin mynewalias
 
+# Deleting an alias
+git remote remove origin
+
 # Fetching
 git fetch origin
 
