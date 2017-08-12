@@ -19,14 +19,14 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 * **git config --global user.name="\<username\>"** - set username
 * **git config --global user.name** - display username
-* **git config --global user.email="&lt;email&gt;"** - set email
+* **git config --global user.email="\<email\>"** - set email
 * **git config --global user.email** - display email
 
 
 # Git initialization
 
 * **git init** - init repo in current dir
-* **git init repositoryname** - init repo in specified repository dir
+* **git init \<repositoryname\>** - init repo in specified repository dir
 
 # Git status
 
@@ -34,7 +34,7 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 # Git add
 
-* **git add filename** - add file to staging (uncommitted)
+* **git add \<filename\>** - add file to staging (uncommitted)
 
 * **git add .** - add all files to staging
 
@@ -42,26 +42,26 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 # Git rm
 
-* **git rm filename** - remove the file from your working directory and the index (Staging)
-* **git rm filename --cached** - remove from the index (Staging) only.
+* **git rm \<filename\>** - remove the file from your working directory and the index (Staging)
+* **git rm \<filename\> --cached** - remove from the index (Staging) only.
 
 # Git commit
 
 * **git commit** - commit the files in staging (will bring up text editor to add message)
 
-* **git commit -m "the message"** - commit the files adding a message
+* **git commit -m "'<the message\>"** - commit the files adding a message
 
 # Git branch
 
 * **git branch** - list the branches
 
-* **git branch branchname** - add the named branch
+* **git branch \<branchname\>** - add the named branch
 
-* **git branch -d branchname** - delete the branch (will warn if branches not merged)
+* **git branch -d \<branchname\>** - delete the branch (will warn if branches not merged)
 
-* **git branch -D branchname** - will force delete even if not merged
+* **git branch -D \<branchname\>** - will force delete even if not merged
 
-* **git checkout branch branchname** - switch to the specified branch
+* **git checkout branch \<branchname\>** - switch to the specified branch
 
 # Remote Fetching (clone, fetch, merge, pull)
 
@@ -69,7 +69,7 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 * **git fetch origin**
 
-* **git merge origin/branchname**
+* **git merge origin/\<branchname\>**
 
 * **git pull origin**
 
@@ -77,7 +77,7 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 ## Set username
 
-* **git config --global user.name="username"**
+* **git config --global user.name="\<username\>"**
 
 ## Show username
 
@@ -85,7 +85,7 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 ## Set email
 
-* **git config --global user.email "email@example.com"**
+* **git config --global user.email "\<email\>"**
 
 ## Show email
 
