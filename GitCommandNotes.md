@@ -8,7 +8,7 @@
 # Important Directories
 
 * /etc/ - System wide (user independent files (\Program Files\git\etc on Windows). Use **git config --system** to interact with this file.
-* ~/.gitconfig - User wide configurations (\Users\<username>\.gitconfig on WIndows).  Use **git config --global** to interact with this file.
+* ~/.gitconfig - User wide configurations (\Users\username\.gitconfig on WIndows).  Use **git config --global** to interact with this file.
 * The local Repository .git/config file.
 
 Note the precedence for these files.  The local takes highest precedence, then the global, and finally the system wide.
@@ -18,7 +18,7 @@ An example of what's stored here is the **user.name** and **user.email** setting
 # Git initialization
 
 * **git init** - init repo in current dir
-* **git init <repository>** - init repo in specified <repository> dir
+* **git init repositoryname** - init repo in specified repository dir
 
 # Git status
 
@@ -26,7 +26,7 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 # Git add
 
-* **git add <filename>** - add file to staging (uncommitted)
+* **git add filename** - add file to staging (uncommitted)
 
 * **git add .** - add all files to staging
 
@@ -34,26 +34,26 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 # Git rm
 
-* **git rm** - remove the file from your working directory and the index (Staging)
-* **git rm --cached** - remove from the index (Staging) only.
+* **git rm filename** - remove the file from your working directory and the index (Staging)
+* **git rm filename --cached** - remove from the index (Staging) only.
 
 # Git commit
 
 * **git commit** - commit the files in staging (will bring up text editor to add message)
 
-* **git commit -m "<message>"** - commit the files adding a message
+* **git commit -m "the message"** - commit the files adding a message
 
 # Git branch
 
 * **git branch** - list the branches
 
-* **git branch <name>** - add the named branch
+* **git branch name** - add the named branch
 
-* **git branch -d <name>** - delete the branch (will warn if branches not merged)
+* **git branch -d name** - delete the branch (will warn if branches not merged)
 
-* **git branch -D <name>** - will force delete even if not merged
+* **git branch -D name** - will force delete even if not merged
 
-* **git checkout <branch name>** - switch to the specified branch
+* **git checkout branch name** - switch to the specified branch
 
 # Remote Fetching (clone, fetch, merge, pull)
 
