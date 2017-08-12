@@ -2,7 +2,7 @@
 git remote add origin https://github.com/Traeken/PythonSandbox.git
 git push -u origin master
 
-# The above push isthe same as:
+# The above push is the same as:
 git push -u https://github.com/Traeken/PythonSandbox.git master
 
 
@@ -13,8 +13,9 @@ git remote -v
 git remote rename origin mynewalias
 
 # Fetching
-git fetch origin 
-Note the above updates info on any changes on the remote, without this git status will show them in sync even when not
+git fetch origin
+
+* Note the above updates info on any changes on the remote, without this git status will show them in sync even when not
 but it doesn't pull the actual changes over, needs to be followed by a merge or pull to to that
 
 # Merging
