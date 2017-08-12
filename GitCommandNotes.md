@@ -15,6 +15,14 @@ Note the precedence for these files.  The local takes highest precedence, then t
 
 An example of what's stored here is the **user.name** and **user.email** settings.
 
+# Git config
+
+* **git config --global user.name="/<username/>"** - set username
+* **git config --global user.name** - display username
+* **git config --global user.email="/<email/>"** - set email
+* **git config --global user.email** - display email
+
+
 # Git initialization
 
 * **git init** - init repo in current dir
@@ -47,13 +55,13 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 * **git branch** - list the branches
 
-* **git branch name** - add the named branch
+* **git branch branchname** - add the named branch
 
-* **git branch -d name** - delete the branch (will warn if branches not merged)
+* **git branch -d branchname** - delete the branch (will warn if branches not merged)
 
-* **git branch -D name** - will force delete even if not merged
+* **git branch -D branchname** - will force delete even if not merged
 
-* **git checkout branch name** - switch to the specified branch
+* **git checkout branch branchname** - switch to the specified branch
 
 # Remote Fetching (clone, fetch, merge, pull)
 
@@ -69,7 +77,7 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 ## Set username
 
-* **git config --global user.name**
+* **git config --global user.name="username"**
 
 ## Show username
 
