@@ -17,9 +17,9 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 # Git config
 
-* **git config --global user.name="/<username/>"** - set username
+* **git config --global user.name="\<username\>"** - set username
 * **git config --global user.name** - display username
-* **git config --global user.email="/<email/>"** - set email
+* **git config --global user.email="&lt;email&gt;"** - set email
 * **git config --global user.email** - display email
 
 
