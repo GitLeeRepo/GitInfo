@@ -9,7 +9,7 @@ git push -u https://github.com/Traeken/PythonSandbox.git master
 # get a list of aliases
 git remote -v
 
-# rname an alias
+# rename an alias
 git remote rename origin mynewalias
 
 # fetching
