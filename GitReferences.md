@@ -8,10 +8,12 @@ Here are some good references:
 # Guides and Documentation
 
 * [GitHub Guides](https://guides.github.com)
+* [Git Pro Online Book](https://git-scm.com/book/en/v2/).  Excellent References.
 
 # Markdown Guides and Info
 
-* [Markdown info](https://guides.github.com/features/mastering-markdown/) and [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [Markdown info](https://guides.github.com/features/mastering-markdown/)
+* [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 # Visual Studio Integration
 

@@ -1,3 +1,10 @@
+# Terminology
+
+* Workspace - Local Checkout
+* Index - Files to be committed,  Also refered to as staging.  Use the git add command to add files to the index,
+* Local Reposistory - the repo on your local system where you work
+* Upstream Reposistory - the remote repository (such as GitHub).  The default remote is called origin, which is created when you do a clone or use the git remote add command.  List remotes with the git remote -v command.
+
 # Git initialization
 git init - init repo in current dir
 
