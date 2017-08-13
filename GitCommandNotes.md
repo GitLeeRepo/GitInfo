@@ -17,16 +17,36 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 # Git config
 
+## Username and email config settings
+
 * **git config --global user.name="\<username\>"** - set username
 * **git config --global user.name** - display username
 * **git config --global user.email="\<email\>"** - set email
 * **git config --global user.email** - display email
 
+## Configure editor to be used by git
+
+* **git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"**
+* **git config --global core.editor** - display the currently set editor
+
+## Display config settings
+
+* **git config --list** 
 
 # Git initialization
 
+## With git init
+
 * **git init** - init repo in current dir
 * **git init \<repositoryname\>** - init repo in specified repository dir
+
+## With git clone
+
+* **git clone https://github.com/GitLeeRepo/GitInfo.git** - will create git repository on the local system called GitInfo.
+* **git clone https://github.com/GitLeeRepo/GitInfo.git MyGitInfo** - will create git repository on the local system called MyGitInfo.
+
+Note that git clone will create the directory, initialize the repository, checks out the latest version of the files to the working directory, and set the remote origin equal to the url supplied with git clone.
+
 
 # Git status
 
@@ -40,16 +60,78 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 * **git add --all** - add all files and files deleted to staging
 
+Note that if a directory is supplied rather than a file name the entire directory and its files and subdirectories will be added.
+
+Note that git add both adds currently untracked files to staging (and thus they become tracked files) and adds modified tracked files to staging.  It can also be used to mark merge-conflicted files as resolved.
+
+Note that if you modify a file staged by git add after it was staged, the second version will be unstaged, with the first version being what will be committed.  You must run git add again to stage the latest revision.
+
 # Git rm
 
 * **git rm \<filename\>** - remove the file from your working directory and the index (Staging)
 * **git rm \<filename\> --cached** - remove from the index (Staging) only.
+
+Note that if you use a wildcard for filename you need to preceed the wild card with a \\ (backslash) so that git doesn't expand the file list in addition to the shell.  For example **git rm \\\*.
+
+# Git rename/move
+
+* **git mv \<oldname\> \<newname\>
+
+Note that if you renamed the file outside of git then you need to do a **git rm \<oldname\>** followed by **git add \<newname\>.
+
+# Unstaging a file
+
+* **git reset HEAD \<filename\>**
+
+# Reverting a file
+
+* **git checkout -- \<filename\>** - will replace the modified file with the file from the last commit.
 
 # Git commit
 
 * **git commit** - commit the files in staging (will bring up text editor to add message)
 
 * **git commit -m "'<the message\>"** - commit the files adding a message
+
+* **git commit -a - lets you bypass the git add that is used to add the files to staging first.  It will commit all modifed files regardless of whether they were staged first.
+
+# Working with remote repositories
+
+## Displaying remote repositories
+
+* **git remote -v** - get a list of remote repositories and their URLs that were previously added with either a **git clone \<remote URL\>** or a **git remote add \<Remote Name\> \<remote URL\> command.  The -v arguement specifies that the URLs should be included, otherwise it's just the remote name.
+
+## Adding Remote name references
+
+* **git remote add \<remote name\> \<remote URL\> - the shorter \<remote name\> can now be used to refer to the remote instead of the URL, in for example push and pull commands.
+
+## Remote Fetching (clone, fetch, merge, pull)
+
+* **git clone \<remote URL\>** - get a remote repo cloned to local repository.  It will create the repository, so don't use this if the repository already exists locally.  Refer to clone comments above for more details.
+
+* **git fetch \<remote name or remote URL\>** - brings any remote changes into your repository (.git) but not your working directory, you must merge or pull to do that.  This is useful to see what changes have taken place on the remote since you cloned or pulled.
+
+* **git merge origin/\<branchname\>**
+
+* **git pull origin** - Does both a fetch and a merge so your working directory is updated as well as your .git repository location.
+
+## Git push to remote
+
+* **git push \<remote name or URL\> \<your branch name\>** -- for example **git push origin master** pushes your master branch to the remote. 
+
+Note that if the remote branch has been changed by someone else since you last pulled then this will not work.  You have to first pull and merge their changes into your changes and then attempt to push again.
+
+## Show remote info
+
+* **git remote show \<remote name or URL\>** - displays info on the remote repository such as the fetch and push URLs, what remote branches there are and whether it is tracked, what remote branch your master pulls from (ex remote master) and what remote branch your master pushes to (ex remote master)
+
+## Renaming a remote
+
+* **git remote rename oldname newname**
+
+## Removing a remote name
+
+* **git remote remove \<remote name\>** - same as **git remote rm \<remote name\>**
 
 # Git branch
 
@@ -61,17 +143,21 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 * **git branch -D \<branchname\>** - will force delete even if not merged
 
-* **git checkout branch \<branchname\>** - switch to the specified branch
+* **git checkout \<branchname\>** - switch to the specified branch
 
-# Remote Fetching (clone, fetch, merge, pull)
+# Git diff
 
-* **git clone** - get a remote repo cloned to local
+* **git diff** - to see the differences between what has **not** been staged and your last commit
+* **git diff** --staged - to see the differences between what **has** been staged and your last commit
 
-* **git fetch origin**
+Note that if you want to use an external diff compare tool use the **git difftool** command.  Run **git difftool --tool-help** to see a list of external diff tools on your system and those that are supported but not currently on the system.  If no external tool is used (you're using **git diff** not **git difftool**) then an internal vim/man page like viewer is used.
 
-* **git merge origin/\<branchname\>**
+# Git log
 
-* **git pull origin**
+* **git log** - displays a history of the commits, including the message, the user name and email, the date and time, and the SHA-1 checksum.  Note that most recent commit is displayed first.
+* **git log -p** - displays the commit history along with the differences between the commits
+* **git log -\<\#\>** - displays only the specified number of commits, for example **git log -2** shows only the last two commits.
+* **git log --stat** - displays various statistcs associated with the commits (the number of files changed, the number of insertions, the number of deletions, etc).
 
 # Config global user and email
 
