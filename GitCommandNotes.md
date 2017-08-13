@@ -71,13 +71,13 @@ Note that if you modify a file staged by git add after it was staged, the second
 * **git rm \<filename\>** - remove the file from your working directory and the index (Staging)
 * **git rm \<filename\> --cached** - remove from the index (Staging) only.
 
-Note that if you use a wildcard for filename you need to preceed the wild card with a \\ (backslash) so that git doesn't expand the file list in addition to the shell.  For example **git rm \\\*.
+Note that if you use a wildcard for filename you need to preceed the wild card with a \\ (backslash) so that git doesn't expand the file list in addition to the shell.  For example **git rm \\\***.
 
 # Git rename/move
 
-* **git mv \<oldname\> \<newname\>
+* **git mv \<oldname\> \<newname\>**
 
-Note that if you renamed the file outside of git then you need to do a **git rm \<oldname\>** followed by **git add \<newname\>.
+Note that if you renamed the file outside of git then you need to do a **git rm \<oldname\>** followed by **git add \<newname\>**.
 
 # Unstaging a file
 
@@ -93,17 +93,17 @@ Note that if you renamed the file outside of git then you need to do a **git rm 
 
 * **git commit -m "'<the message\>"** - commit the files adding a message
 
-* **git commit -a - lets you bypass the git add that is used to add the files to staging first.  It will commit all modifed files regardless of whether they were staged first.
+* **git commit -a** - lets you bypass the git add that is used to add the files to staging first.  It will commit all modifed files regardless of whether they were staged first.
 
 # Working with remote repositories
 
 ## Displaying remote repositories
 
-* **git remote -v** - get a list of remote repositories and their URLs that were previously added with either a **git clone \<remote URL\>** or a **git remote add \<Remote Name\> \<remote URL\> command.  The -v arguement specifies that the URLs should be included, otherwise it's just the remote name.
+* **git remote -v** - get a list of remote repositories and their URLs that were previously added with either a **git clone \<remote URL\>** or a **git remote add \<Remote Name\> \<remote URL\>** command.  The -v arguement specifies that the URLs should be included, otherwise it's just the remote name.
 
 ## Adding Remote name references
 
-* **git remote add \<remote name\> \<remote URL\> - the shorter \<remote name\> can now be used to refer to the remote instead of the URL, in for example push and pull commands.
+* **git remote add \<remote name\> \<remote URL\>** - the shorter \<remote name\> can now be used to refer to the remote instead of the URL, in for example push and pull commands.
 
 ## Remote Fetching (clone, fetch, merge, pull)
 
