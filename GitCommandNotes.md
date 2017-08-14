@@ -145,6 +145,11 @@ Note that if the remote branch has been changed by someone else since you last p
 
 * **git checkout \<branchname\>** - switch to the specified branch
 
+* **git checkout -b \<branchname\>** - create the branch and switch to it
+
+* **git checkout -b \<tagname\> \<branchname\>** - checkout the merge with the specified tag to the specified branch which is created
+
+
 # Git diff
 
 * **git diff** - to see the differences between what has **not** been staged and your last commit
@@ -158,6 +163,18 @@ Note that if you want to use an external diff compare tool use the **git difftoo
 * **git log -p** - displays the commit history along with the differences between the commits
 * **git log -\<\#\>** - displays only the specified number of commits, for example **git log -2** shows only the last two commits.
 * **git log --stat** - displays various statistcs associated with the commits (the number of files changed, the number of insertions, the number of deletions, etc).
+
+# Git tag
+
+* **git tag -a \<tagname\> -m "\<tag message\>"** - adds an annotated tag (the -a) to the current merge.  Annotated tags are usually what you want rather than temporary tags which is what you get without the -a arg.
+
+* **git tag -a \<tagname\> \<commit checksum\>** - tags the specified prior merge based on its checksum (you don't have to enter the whole thing).  You can get the prior merge checksums by running the **git log** command.
+
+Note that tags are not automatically pushed to the remote when you do a push.  You must either push the specified tagname or all your tags, for example:
+
+* **git push origin \<tagname\>**
+
+* **git push orign --tags** - will push all your tags in your current repository to the remote server.
 
 # Config global user and email
 
