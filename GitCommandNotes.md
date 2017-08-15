@@ -135,6 +135,12 @@ Note that if the remote branch has been changed by someone else since you last p
 
 # Git branch
 
+## Overview
+
+Text
+
+## Git branch commands
+
 * **git branch** - list the branches
 
 * **git branch \<branchname\>** - add the named branch
@@ -142,6 +148,8 @@ Note that if the remote branch has been changed by someone else since you last p
 * **git branch -d \<branchname\>** - delete the branch (will warn if branches not merged)
 
 * **git branch -D \<branchname\>** - will force delete even if not merged
+
+## Git checkout commands
 
 * **git checkout \<branchname\>** - switch to the specified branch
 
