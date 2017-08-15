@@ -103,9 +103,9 @@ Note that if you renamed the file outside of git then you need to do a **git rm 
 
 ## For remote branch and checkout commands refer to:
 
-* [Remote branch commands](##Git-remote-branch-commands]
+* [Remote branch commands](##Git-remote-branch-commands)
 
-* [Remote checkout commands][##Git-remote-checkout-commands]
+* [Remote checkout commands](##Git-remote-checkout-commands)
 
 ## Displaying remote repositories
 
