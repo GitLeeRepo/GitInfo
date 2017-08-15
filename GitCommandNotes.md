@@ -101,6 +101,12 @@ Note that if you renamed the file outside of git then you need to do a **git rm 
 
 # Working with remote repositories
 
+## For remote branch and checkout commands refer to:
+
+* [Remote branch commands][## Git remote branch commands]
+
+* [Remote checkout commands][## Git remote checkout commands]
+
 ## Displaying remote repositories
 
 * **git remote -v** - get a list of remote repositories and their URLs that were previously added with either a **git clone \<remote URL\>** or a **git remote add \<Remote Name\> \<remote URL\>** command.  The -v arguement specifies that the URLs should be included, otherwise it's just the remote name.
@@ -121,7 +127,9 @@ Note that if you renamed the file outside of git then you need to do a **git rm 
 
 ## Git push to remote
 
-* **git push \<remote name or URL\> \<your branch name\>** -- for example **git push origin master** pushes your master branch to the remote. 
+* **git push \<remote name or URL\> \<local branch name\>** - for example **git push origin master** pushes your master branch to the remote. The branch name is optional, if excluded it will be your current branch.  Will create a branch with the same name on the remote.
+
+* **git push \<remote name or URL\> \<local branch name\>:\<remote branch name\>** - will push your local branch to the remote giving it the remote branch name specified.
 
 Note that if the remote branch has been changed by someone else since you last pulled then this will not work.  You have to first pull and merge their changes into your changes and then attempt to push again.
 
@@ -143,7 +151,7 @@ Note that if the remote branch has been changed by someone else since you last p
 
 Text
 
-## Git branch commands
+## Git local branch commands
 
 * **git branch** - list the branches
 
@@ -153,7 +161,7 @@ Text
 
 * **git branch -D \<branchname\>** - will force delete even if not merged
 
-## Git checkout commands
+## Git local checkout commands
 
 * **git checkout \<branchname\>** - switch to the specified branch
 
@@ -161,6 +169,11 @@ Text
 
 * **git checkout -b \<tagname\> \<branchname\>** - checkout the merge with the specified tag to the specified branch which is created
 
+## Git remote branch commands
+
+## Git remote checkout commands
+
+* **git checkout -b \<local branch name\> origin/\<server branch name\>** - checkout the remote branch to the local branch
 
 # Git diff
 
