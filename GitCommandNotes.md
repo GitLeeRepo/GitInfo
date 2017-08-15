@@ -103,9 +103,9 @@ Note that if you renamed the file outside of git then you need to do a **git rm 
 
 ## For remote branch and checkout commands refer to:
 
-* [Remote branch commands](##Git-remote-branch-commands)
+* [Remote branch commands](## Git-remote-branch-commands)
 
-* [Remote checkout commands](##Git-remote-checkout-commands)
+* [Remote checkout commands](## Git-remote-checkout-commands)
 
 ## Displaying remote repositories
 
@@ -169,11 +169,11 @@ Text
 
 * **git checkout -b \<tagname\> \<branchname\>** - checkout the merge with the specified tag to the specified branch which is created
 
-##Git remote branch commands
+## Git remote branch commands
 
 Commands
 
-##Git remote checkout commands
+## Git remote checkout commands
 
 * **git checkout -b \<local branch name\> origin/\<server branch name\>** - checkout the remote branch to the local branch
 
