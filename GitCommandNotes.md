@@ -177,6 +177,8 @@ Commands
 
 * **git checkout -b \<local branch name\> origin/\<server branch name\>** - checkout the remote branch to the local branch
 
+* **git checkout --track origin/\<remote branch name\> - 
+
 # Git diff
 
 * **git diff** - to see the differences between what has **not** been staged and your last commit
