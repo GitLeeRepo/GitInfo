@@ -18,3 +18,7 @@ Here are some good references:
 # Visual Studio Integration
 
 * [Visual Studio Integration](https://github.com/github/VisualStudio/tree/master/docs)
+
+# YouTube Videos
+
+* [Git Crash Course](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
