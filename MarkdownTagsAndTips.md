@@ -1,3 +1,7 @@
+# Overview
+
+Contains notes on using the Markdown file format.
+
 # References
 
 * [Markdown info](https://guides.github.com/features/mastering-markdown/)
