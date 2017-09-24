@@ -1,4 +1,6 @@
-Here are some good references:
+# Overview
+
+Contains various Git references
 
 # Command References
 
