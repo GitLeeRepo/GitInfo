@@ -37,6 +37,24 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 * **git config --list** 
 
+# .gitignore
+
+* The files and directories listed in .gitignore will not be added to the repository.  An example of a filename and directory entry in .gitignore (notice the directory name has a forward slash after it:
+
+```
+filename.txt
+
+dirname/
+```
+
+* Note: If you notice a file or directory doesn't seeem to be ignore by a .gitignore entry, then remove it from the cache with:
+
+`git rm --cached filename`
+
+or
+
+`git rm -r --cached directoryname`
+
 # Git initialization
 
 ## With git init
