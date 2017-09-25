@@ -23,4 +23,6 @@ Contains various Git references
 
 # YouTube Videos
 
+* [Thorough Git Tutorial/Guide](https://git-scm.com/book/en/v2/)
+
 * [Git Crash Course](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
