@@ -133,6 +133,10 @@ Note that if you renamed the file outside of git then you need to do a **git rm 
 
 * **git remote add \<remote name\> \<remote URL\>** - the shorter \<remote name\> can now be used to refer to the remote instead of the URL, in for example push and pull commands.
 
+## Changing the URI of a remote repository
+
+* **git remote set-url origin \<remote URL\>** - replace any current URL with the specified one for the specified remote (origin in this case)
+
 ## Remote Fetching (clone, fetch, merge, pull)
 
 * **git clone \<remote URL\>** - get a remote repo cloned to local repository.  It will create the repository, so don't use this if the repository already exists locally.  Refer to clone comments above for more details.
