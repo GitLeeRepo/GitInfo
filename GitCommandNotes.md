@@ -81,16 +81,14 @@ Note that git clone will create the directory, initialize the repository, checks
 # Git add
 
 * **git add \<filename\>** - add file to staging (uncommitted)
-
 * **git add .** - add all files to staging
-
 * **git add --all** - add all files and files deleted to staging
 
-	Note that if a directory is supplied rather than a file name the entire directory and its files and subdirectories will be added.
+Note that if a directory is supplied rather than a file name the entire directory and its files and subdirectories will be added.
 
-	Note that git add both adds currently untracked files to staging (and thus they become tracked files) and adds modified tracked files to staging.  It can also be used to mark merge-conflicted files as resolved.
+Note that git add both adds currently untracked files to staging (and thus they become tracked files) and adds modified tracked files to staging.  It can also be used to mark merge-conflicted files as resolved.
 
-	Note that if you modify a file staged by git add after it was staged, the second version will be unstaged, with the first version being what will be committed.  You must run git add again to stage the latest revision.
+Note that if you modify a file staged by git add after it was staged, the second version will be unstaged, with the first version being what will be committed.  You must run git add again to stage the latest revision.
 
 # Git rm
 
@@ -150,7 +148,7 @@ Note that if you use a wildcard for filename you need to preceed the wild card w
 * **git push \<remote name or URL\> \<local branch name\>** - for example **git push origin master** pushes your master branch to the remote. The branch name is optional, if excluded it will be your current branch.  Will create a branch with the same name on the remote.
 * **git push \<remote name or URL\> \<local branch name\>:\<remote branch name\>** - will push your local branch to the remote giving it the remote branch name specified.
 
-	Note that if the remote branch has been changed by someone else since you last pulled then this will not work.  You have to first pull and merge their changes into your changes and then attempt to push again.
+Note that if the remote branch has been changed by someone else since you last pulled then this will not work.  You have to first pull and merge their changes into your changes and then attempt to push again.
 
 ## Show remote info
 
