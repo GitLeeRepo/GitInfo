@@ -41,19 +41,23 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 * The files and directories listed in .gitignore will not be added to the repository.  An example of a filename and directory entry in .gitignore (notice the directory name has a forward slash after it:
 
-```
-filename.txt
+  ```
+  filename.txt
 
-dirname/
-```
+  dirname/
+  ```
 
 * Note: If you notice a file or directory doesn't seeem to be ignore by a .gitignore entry, then remove it from the cache with:
 
-`git rm --cached filename`
+  ```
+  git rm --cached filename
+  ```
 
-or
+  or
 
-`git rm -r --cached directoryname`
+  ```
+  git rm -r --cached directoryname
+  ```
 
 # Git initialization
 
@@ -82,11 +86,11 @@ Note that git clone will create the directory, initialize the repository, checks
 
 * **git add --all** - add all files and files deleted to staging
 
-Note that if a directory is supplied rather than a file name the entire directory and its files and subdirectories will be added.
+	Note that if a directory is supplied rather than a file name the entire directory and its files and subdirectories will be added.
 
-Note that git add both adds currently untracked files to staging (and thus they become tracked files) and adds modified tracked files to staging.  It can also be used to mark merge-conflicted files as resolved.
+	Note that git add both adds currently untracked files to staging (and thus they become tracked files) and adds modified tracked files to staging.  It can also be used to mark merge-conflicted files as resolved.
 
-Note that if you modify a file staged by git add after it was staged, the second version will be unstaged, with the first version being what will be committed.  You must run git add again to stage the latest revision.
+	Note that if you modify a file staged by git add after it was staged, the second version will be unstaged, with the first version being what will be committed.  You must run git add again to stage the latest revision.
 
 # Git rm
 
@@ -99,7 +103,7 @@ Note that if you use a wildcard for filename you need to preceed the wild card w
 
 * **git mv \<oldname\> \<newname\>**
 
-Note that if you renamed the file outside of git then you need to do a **git rm \<oldname\>** followed by **git add \<newname\>**.
+	Note that if you renamed the file outside of git then you need to do a **git rm \<oldname\>** followed by **git add \<newname\>**.
 
 # Unstaging a file
 
@@ -112,9 +116,7 @@ Note that if you renamed the file outside of git then you need to do a **git rm 
 # Git commit
 
 * **git commit** - commit the files in staging (will bring up text editor to add message)
-
 * **git commit -m "'<the message\>"** - commit the files adding a message
-
 * **git commit -a** - lets you bypass the git add that is used to add the files to staging first.  It will commit all modifed files regardless of whether they were staged first.
 
 # Working with remote repositories
@@ -122,7 +124,6 @@ Note that if you renamed the file outside of git then you need to do a **git rm 
 ## For remote branch and checkout commands refer to:
 
 * [Remote branch commands](#git-remote-branch-commands)
-
 * [Remote checkout commands](#git-remote-checkout-commands)
 
 ## Displaying remote repositories
@@ -140,20 +141,16 @@ Note that if you renamed the file outside of git then you need to do a **git rm 
 ## Remote Fetching (clone, fetch, merge, pull)
 
 * **git clone \<remote URL\>** - get a remote repo cloned to local repository.  It will create the repository, so don't use this if the repository already exists locally.  Refer to clone comments above for more details.
-
 * **git fetch \<remote name or remote URL\>** - brings any remote changes into your repository (.git) but not your working directory, you must merge or pull to do that.  This is useful to see what changes have taken place on the remote since you cloned or pulled.
-
 * **git merge origin/\<branchname\>**
-
 * **git pull origin** - Does both a fetch and a merge so your working directory is updated as well as your .git repository location.
 
 ## Git push to remote
 
 * **git push \<remote name or URL\> \<local branch name\>** - for example **git push origin master** pushes your master branch to the remote. The branch name is optional, if excluded it will be your current branch.  Will create a branch with the same name on the remote.
-
 * **git push \<remote name or URL\> \<local branch name\>:\<remote branch name\>** - will push your local branch to the remote giving it the remote branch name specified.
 
-Note that if the remote branch has been changed by someone else since you last pulled then this will not work.  You have to first pull and merge their changes into your changes and then attempt to push again.
+	Note that if the remote branch has been changed by someone else since you last pulled then this will not work.  You have to first pull and merge their changes into your changes and then attempt to push again.
 
 ## Show remote info
 
@@ -176,19 +173,14 @@ Text
 ## Git local branch commands
 
 * **git branch** - list the branches
-
 * **git branch \<branchname\>** - add the named branch
-
 * **git branch -d \<branchname\>** - delete the branch (will warn if branches not merged)
-
 * **git branch -D \<branchname\>** - will force delete even if not merged
 
 ## Git local checkout commands
 
 * **git checkout \<branchname\>** - switch to the specified branch
-
 * **git checkout -b \<branchname\>** - create the branch and switch to it
-
 * **git checkout -b \<tagname\> \<branchname\>** - checkout the merge with the specified tag to the specified branch which is created
 
 ## Git remote branch commands
@@ -198,7 +190,6 @@ Commands
 ## Git remote checkout commands
 
 * **git checkout -b \<local branch name\> origin/\<server branch name\>** - checkout the remote branch to the local branch
-
 * **git checkout --track origin/\<remote branch name\> - 
 
 # Git diff
@@ -218,13 +209,9 @@ Note that if you want to use an external diff compare tool use the **git difftoo
 # Git tag
 
 * **git tag -a \<tagname\> -m "\<tag message\>"** - adds an annotated tag (the -a) to the current merge.  Annotated tags are usually what you want rather than temporary tags which is what you get without the -a arg.
-
 * **git tag -a \<tagname\> \<commit checksum\>** - tags the specified prior merge based on its checksum (you don't have to enter the whole thing).  You can get the prior merge checksums by running the **git log** command.
-
 Note that tags are not automatically pushed to the remote when you do a push.  You must either push the specified tagname or all your tags, for example:
-
 * **git push origin \<tagname\>**
-
 * **git push orign --tags** - will push all your tags in your current repository to the remote server.
 
 # Config global user and email
