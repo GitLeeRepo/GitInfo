@@ -236,21 +236,23 @@ Note that tags are not automatically pushed to the remote when you do a push.  Y
 
 For sites that require credentials, if they are not configured/stored you will be prompted each time you connect to the remote repository.
 
-On Linux, a simple, but not highly secure method (since they are stored on the file system in clear text) is to do the following:
+* On Windows Git uses Credentials Manager to securely store your username and password.  You only need to enter enter them the first time you use that remote reposistory
 
-```bash
-git config credential.helper store
+* On Linux, a simple, but not highly secure method (since they are stored on the file system in clear text) is to do the following:
 
-git pull origin master  (or any other command that will prompt for your credentials
-```
-This will prompt for your username and password, but subsequent attempts will be read from your `~/.git-credentials` file
+  ```bash
+  git config credential.helper store
 
-For better security you can store the credentials in the cache for a specified amount of time.  For example:
+  git pull origin master  (or any other command that will prompt for your credentials
+  ```
+  This will prompt for your username and password, but subsequent attempts will be read from your `~/.git-credentials` file
 
-```bash
-git config credential.helper 'cache --timeout=900'
+  For better security you can store the credentials in the cache for a specified amount of time.  For example:
 
-git pull origin master  (or any other command that will prompt for your credentials
-````
-In this case your credentials will be stored in the cache for 15 minutes (900 seconds)
+  ```bash
+  git config credential.helper 'cache --timeout=900'
+
+  git pull origin master  (or any other command that will prompt for your credentials
+  ````
+  In this case your credentials will be stored in the cache for 15 minutes (900 seconds)
 
