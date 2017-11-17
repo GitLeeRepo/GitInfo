@@ -218,7 +218,7 @@ Note that tags are not automatically pushed to the remote when you do a push.  Y
 
 ### Set username
 
-* **git config --global user.name="\<username\>"**
+* **git config --global user.name "\<username\>"**
 
 ### Show username
 
