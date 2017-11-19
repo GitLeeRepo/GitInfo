@@ -203,6 +203,7 @@ Note that if you want to use an external diff compare tool use the **git difftoo
 * **git log -p** - displays the commit history along with the differences between the commits
 * **git log -\<\#\>** - displays only the specified number of commits, for example **git log -2** shows only the last two commits.
 * **git log --stat** - displays various statistcs associated with the commits (the number of files changed, the number of insertions, the number of deletions, etc).
+* **git log --pretty=oneline --abbrev-commit** - a more compact format
 
 # Git tag
 
