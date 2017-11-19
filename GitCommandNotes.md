@@ -199,13 +199,14 @@ Note that if you want to use an external diff compare tool use the **git difftoo
 
 # Git log
 
-Note: for a specfic log entry add enough of the left part of the commit checksum to the command to uniquely identify it (it doesn't take many characters)
+Note: optiionally, for a specfic log entry add enough of the left part of the commit checksum to the command to uniquely identify it (it doesn't take many characters)
 
-* **git log \<opt checksum\>** - displays a history of the commits, including the message, the user name and email, the date and time, and the SHA-1 checksum.  Note that most recent commit is displayed first.
-* **git log -p \<opt checksum\>** - displays the commit history along with the differences between the commits
+* **git log \<optional checksum\>** - displays a history of the commits, including the message, the user name and email, the date and time, and the SHA-1 checksum.  Note that most recent commit is displayed first.
 * **git log -\<\#\>** - displays only the specified number of commits, for example **git log -2** shows only the last two commits.
+* **git log -p \<optional checksum\>** - displays the commit history along with the differences between the commits
 * **git log --stat** - displays various statistcs associated with the commits (the number of files changed, the number of insertions, the number of deletions, etc).
 * **git log --pretty=oneline --abbrev-commit** - displays one line per commit, with the commit id and commit message. Also, display a much shorter (abbreviated) commit checksum, which is helpful since you will likely only need a small portion of this to identify a particular commit. 
+* **git log --grep="syscalls"** - display the entry/entries associated with the grep regex pattern (syscalls in this case)
 
 # Git tag
 
