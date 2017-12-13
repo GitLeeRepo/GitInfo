@@ -4,15 +4,15 @@ An organized collection of my notes from various sources, with the excellent [Gi
 
 # Terminology
 
-* Local Reposistory - the repository on your local system. The .git directory.  When you do a **git commit** the versioned files are added here.
+* Local Repository - the repository on your local system. The .git directory.  When you do a **git commit** the versioned files are added here.
 * Working Directory (Working Tree) - that area of the local repository where you work.  Visible to the local operating system.  This is where the files go when you do a **git checkout** (pulled from the .git repository directory).
 * Index (Staging Area) - Files to be committed,  Use the **git add** command to add files to the index,
-* Upstream Reposistory - the remote repository (such as GitHub).  The default remote is called origin, which is created when you do a clone or use the **git remote add** command.  List remotes with the **git remote -v**.
+* Upstream Repository - the remote repository (such as GitHub).  The default remote is called origin, which is created when you do a clone or use the **git remote add** command.  List remotes with the **git remote -v**.
 
 # Important Directories
 
 * /etc/ - System wide (user independent files (\Program Files\git\etc on Windows). Use **git config --system** to interact with this file.
-* ~/.gitconfig - User wide configurations (\Users\username\.gitconfig on WIndows).  Use **git config --global** to interact with this file.
+* ~/.gitconfig - User wide configurations (\Users\username\.gitconfig on Windows).  Use **git config --global** to interact with this file.
 * The local Repository .git/config file.
 
 Note the precedence for these files.  The local takes highest precedence, then the global, and finally the system wide.
@@ -47,7 +47,7 @@ An example of what's stored here is the **user.name** and **user.email** setting
   dirname/
   ```
 
-* Note: If you notice a file or directory doesn't seeem to be ignore by a .gitignore entry, then remove it from the cache with:
+* Note: If you notice a file or directory doesn't seem to be ignore by a .gitignore entry, then remove it from the cache with:
 
   ```
   git rm --cached filename
@@ -71,7 +71,7 @@ An example of what's stored here is the **user.name** and **user.email** setting
 * **git clone https://github.com/GitLeeRepo/GitInfo.git** - will create git repository on the local system called GitInfo.
 * **git clone https://github.com/GitLeeRepo/GitInfo.git MyGitInfo** - will create git repository on the local system called MyGitInfo.
 
-Note that git clone will create the directory, initialize the repository, checks out the latest version of the files to the working directory, and set the remote origin equal to the url supplied with git clone.
+Note that git clone will create the directory, initialize the repository, checks out the latest version of the files to the working directory, and set the remote origin equal to the URL supplied with git clone.
 
 
 # Git status
@@ -95,7 +95,7 @@ Note that if you modify a file staged by git add after it was staged, the second
 * **git rm \<filename\>** - remove the file from your working directory and the index (Staging)
 * **git rm \<filename\> --cached** - remove from the index (Staging) only.
 
-Note that if you use a wildcard for filename you need to preceed the wild card with a \\ (backslash) so that git doesn't expand the file list in addition to the shell.  For example **git rm \\\***.
+Note that if you use a wildcard for filename you need to proceed the wild card with a \\ (backslash) so that git doesn't expand the file list in addition to the shell.  For example **git rm \\\***.
 
 # Git rename/move
 
@@ -214,7 +214,7 @@ Note: optiionally, for a specfic log entry add enough of the left part of the co
 * **git tag -a \<tagname\> \<commit checksum\>** - tags the specified prior merge based on its checksum (you don't have to enter the whole thing).  You can get the prior merge checksums by running the **git log** command.
 Note that tags are not automatically pushed to the remote when you do a push.  You must either push the specified tagname or all your tags, for example:
 * **git push origin \<tagname\>**
-* **git push orign --tags** - will push all your tags in your current repository to the remote server.
+* **git push origin --tags** - will push all your tags in your current repository to the remote server.
 
 # Configuration
 
@@ -240,7 +240,7 @@ Note that tags are not automatically pushed to the remote when you do a push.  Y
 
 For sites that require credentials, if they are not configured/stored you will be prompted each time you connect to the remote repository.
 
-* On Windows Git uses Credentials Manager to securely store your username and password.  You only need to enter enter them the first time you use that remote reposistory
+* On Windows Git uses Credentials Manager to securely store your username and password.  You only need to enter enter them the first time you use that remote repository
 
 * On Linux, a simple, but not highly secure method (since they are stored on the file system in clear text) is to do the following:
 
