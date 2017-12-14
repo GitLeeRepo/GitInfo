@@ -115,7 +115,7 @@ Note that if you use a wildcard for filename you need to proceed the wild card w
 
 * **git commit** - commit the files in staging (will bring up text editor to add message)
 * **git commit -m "'<the message\>"** - commit the files adding a message
-* **git commit -a** - lets you bypass the git add that is used to add the files to staging first.  It will commit all modifed files regardless of whether they were staged first.
+* **git commit -a** - lets you bypass the git add that is used to add the files to staging first.  It will commit all modified files regardless of whether they were staged first.
 
 # Working with remote repositories
 
@@ -126,7 +126,7 @@ Note that if you use a wildcard for filename you need to proceed the wild card w
 
 ## Displaying remote repositories
 
-* **git remote -v** - get a list of remote repositories and their URLs that were previously added with either a **git clone \<remote URL\>** or a **git remote add \<Remote Name\> \<remote URL\>** command.  The -v arguement specifies that the URLs should be included, otherwise it's just the remote name.
+* **git remote -v** - get a list of remote repositories and their URLs that were previously added with either a **git clone \<remote URL\>** or a **git remote add \<Remote Name\> \<remote URL\>** command.  The -v argument specifies that the URLs should be included, otherwise it's just the remote name.
 
 ## Adding Remote name references
 
