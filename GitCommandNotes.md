@@ -128,6 +128,12 @@ Note that if you use a wildcard for filename you need to proceed the wild card w
 
 * **git remote -v** - get a list of remote repositories and their URLs that were previously added with either a **git clone \<remote URL\>** or a **git remote add \<Remote Name\> \<remote URL\>** command.  The -v argument specifies that the URLs should be included, otherwise it's just the remote name.
 
+## Check remote status
+
+To check with the remote is ahead, behind, or up to date with your local repoistory:
+
+* **git status -uno**
+
 ## Adding Remote name references
 
 * **git remote add \<remote name\> \<remote URL\>** - the shorter \<remote name\> can now be used to refer to the remote instead of the URL, in for example push and pull commands.
