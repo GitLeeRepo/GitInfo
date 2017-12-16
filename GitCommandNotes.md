@@ -130,9 +130,29 @@ Note that if you use a wildcard for filename you need to proceed the wild card w
 
 ## Check remote status
 
-To check with the remote is ahead, behind, or up to date with your local repoistory:
+To check with the remote is ahead of your local repoistory:
 
-* **git status -uno**
+* **git fetch**
+
+A useful script to check several repositories:
+
+```bash
+#!/bin/bash
+
+for d in */ ; do
+    echo "$d"
+    cd $d
+    git fetch
+    if [ $( git rev-parse HEAD ) == $( git rev-parse @{u} ) ]
+    then
+        echo "Up to date"
+    else
+        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Remote updated, pull needed"
+    fi
+    cd ../
+    echo ""
+done
+```
 
 ## Adding Remote name references
 
