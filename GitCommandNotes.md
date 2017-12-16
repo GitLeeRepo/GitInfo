@@ -130,7 +130,7 @@ Note that if you use a wildcard for filename you need to proceed the wild card w
 
 ## Check remote status
 
-To check with the remote is ahead of your local repoistory:
+To check with the remote is ahead of your local repository:
 
 * **git fetch**
 
@@ -153,7 +153,7 @@ for d in */ ; do
     echo ""
 done
 ```
-Note this will detect if the remote is ahead, but will also trigger for a local commit not yet pushed.  Untracked or staged files should not triger the out of sync message.  If it is the first time the fetch is run it will also display the fetch message which will indicate whether the the remote is ahead of the local, but subsequent runs will only display the above message.  A git status will also give you more detail, but this script is intended to be run on many repositories, so less detail is often desired.  Refer to my gitstatus.sh script in this repository for a script that provides status information on multiple repositories.
+Note this will detect if the remote is ahead, but will also trigger for a local commit not yet pushed.  Untracked or staged files should not trigger the out of sync message.  If it is the first time the fetch is run it will also display the fetch message which will indicate whether the the remote is ahead of the local, but subsequent runs will only display the above message.  A git status will also give you more detail, but this script is intended to be run on many repositories, so less detail is often desired.  Refer to my gitstatus.sh script in this repository for a script that provides status information on multiple repositories.
 
 ## Adding Remote name references
 
