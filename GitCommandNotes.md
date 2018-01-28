@@ -281,9 +281,12 @@ For sites that require credentials, if they are not configured/stored you will b
   For better security you can store the credentials in the cache for a specified amount of time.  For example:
 
   ```bash
+  # to change in your global settings so that it will continue to be avaliable
+  git config --global credential.helper 'cache --timeout=3600'
+  # if you don't want to store it in global settings
   git config credential.helper 'cache --timeout=900'
 
   git pull origin master  (or any other command that will prompt for your credentials
   ````
-  In this case your credentials will be stored in the cache for 15 minutes (900 seconds)
+  In this case your credentials will be stored in the cache for an hour in the first case and 15 minutes (900 seconds)
 
