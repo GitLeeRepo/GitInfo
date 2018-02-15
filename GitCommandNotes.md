@@ -2,6 +2,14 @@
 
 An organized collection of my notes from various sources, with the excellent [Git Pro Book v2](https://git-scm.com/book/en/v2/) online book by Scott Chacon and Ben Straub being the primary source.  All the content of their book is licensed under the [Creative Commons Attribution Non Commercial Share Alike 3.0 license](https://creativecommons.org/licenses/by-nc-sa/3.0/). 
 
+# References
+
+## My Own Notes
+
+* [GitHubSpecific](https://github.com/GitLeeRepo/GitInfo/blob/master/GitHubSpecific.md#overview)
+* [GitReferences](https://github.com/GitLeeRepo/GitInfo/blob/master/GitReferences.md#overview)
+* [MarkdownTagsAndTips](https://github.com/GitLeeRepo/GitInfo/blob/master/MarkdownTagsAndTips.md#overview)
+
 # Terminology
 
 * Local Repository - the repository on your local system. The .git directory.  When you do a **git commit** the versioned files are added here.
