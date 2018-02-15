@@ -1,4 +1,4 @@
-# Overview and Credits
+# Overview
 
 An organized collection of my notes from various sources, with the excellent [Git Pro Book v2](https://git-scm.com/book/en/v2/) online book by Scott Chacon and Ben Straub being the primary source.  All the content of their book is licensed under the [Creative Commons Attribution Non Commercial Share Alike 3.0 license](https://creativecommons.org/licenses/by-nc-sa/3.0/). 
 
