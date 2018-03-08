@@ -7,6 +7,13 @@ Contains notes on using the Markdown file format.
 * [Markdown info](https://guides.github.com/features/mastering-markdown/)
 * [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
+# Image Tags
+
+```
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+```
+
 # Tip - Internal heading links (bookmark anchors)
 
 To link internally to the "**## Git remote branch commands**" h2 heading enter:
