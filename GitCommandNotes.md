@@ -298,3 +298,24 @@ For sites that require credentials, if they are not configured/stored you will b
   ````
   In this case your credentials will be stored in the cache for an hour in the first case and 15 minutes (900 seconds)
 
+# Issues/Errors and Solutions
+
+## Error bad signature - fatal: index file corrupt
+
+**Error Message**
+
+```bash
+error: bad signature
+fatal: index file corrupt
+```
+
+**Solution:**
+
+```bash
+rm -f .git/index
+git reset
+```
+
+**Comment**
+
+This error occurred with an **Unreal Engine 4 Project** after a computer crash.  Running the commands above fixed it.
