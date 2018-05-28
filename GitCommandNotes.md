@@ -125,7 +125,7 @@ Note that if you use a wildcard for filename you need to proceed the wild card w
 * **git commit -m "'<the message\>"** - commit the files adding a message
 * **git commit -a** - lets you bypass the git add that is used to add the files to staging first.  It will commit all modified files regardless of whether they were staged first.
 
-# Working with remote repositories
+# Working with Remote Repositories
 
 ## For remote branch and checkout commands refer to:
 
