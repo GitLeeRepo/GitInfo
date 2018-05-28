@@ -197,6 +197,13 @@ Note that if the remote branch has been changed by someone else since you last p
 
 * **git remote remove \<remote name\>** - same as **git remote rm \<remote name\>**
 
+## Overwriting Local Repo with Remote
+
+```
+git fetch origin
+git reset --hard origin/master
+```
+
 # Git branch
 
 ## Overview
