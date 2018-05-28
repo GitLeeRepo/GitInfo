@@ -202,7 +202,11 @@ Note that if the remote branch has been changed by someone else since you last p
 ```
 git fetch origin
 git reset --hard origin/master
+git add .
+git push
 ```
+
+Note: the instructions I saw stopped at **reset** but that didn't fix the conflict.  It showed the files as uncached.  I did an **add** and **push** afterwards which seemed to sync things up, i.e. The last change on the remote was still there.
 
 # Git branch
 
