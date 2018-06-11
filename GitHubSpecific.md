@@ -27,7 +27,8 @@ Contains notes on GitHub specific commands
 
 1. Create an **empty** repository on GitHub.  Important: Don't add anything including README or gitignore.
 2. Make sure remote git is committed and ready to go
-3. Enter command **git remote add origin https://github.com/GitLeeRepo/\<GitHubRepoName>.git**
+3a. (alt-A). For brand new repo enter command **git remote add origin https://github.com/GitLeeRepo/\<GitHubRepoName>.git**
+3b. (alt-B). For new repo based on copied repo **git remote set-url origin https://github.com/GitLeeRepo/\<GitHubRepoName>.git**
 4. git push -u origin master
 
 # Creating a Folder in the Web Interface
