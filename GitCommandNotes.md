@@ -115,7 +115,7 @@ Note that if you use a wildcard for filename you need to proceed the wild card w
 
 * **git reset HEAD \<filename\>**
 
-# Reverting a file
+# Reverting a file -  Discard changes
 
 * **git checkout -- \<filename\>** - will replace the modified file with the file from the last commit.
 
