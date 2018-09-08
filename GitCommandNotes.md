@@ -325,8 +325,7 @@ git config --global core.safecrlf false
 
 From StatckOverflow:
 
->You should use **core.autocrlf input** and **core.eol input**. Or just don't let git change the line endings at all with **autocrlf false**
->and get rid of highlighting of crlfs in diffs, etc with **core.whitespace cr-at-eol**.
+>You should use **core.autocrlf input** and **core.eol input**. Or just don't let git change the line endings at all with **autocrlf false** and get rid of highlighting of crlfs in diffs, etc with **core.whitespace cr-at-eol**.
 
 
 ## Error bad signature - fatal: index file corrupt
