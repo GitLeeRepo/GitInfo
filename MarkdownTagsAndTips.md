@@ -14,6 +14,14 @@ Contains notes on using the Markdown file format.
 Format: ![Alt Text](url)
 ```
 
+# Block Quotes
+
+Note that when using **block quotes** with the **\>** at the beginning of the line, it is not necessary to put in **line feeds**.  One **\>** symbol will be sufficient for text that wraps from one line to the next.  Also note that you can continue to use **markdown codes** such as **bolding** within the quote.
+
+> Multiple wrapping lines with a single **block quote indicator**: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae facilisis neque. Maecenas nec mattis ante, quis auctor felis. Integer pulvinar ullamcorper lacus a aliquam. Nulla lacus sapien, rutrum sed justo sodales, vestibulum molestie velit. 
+
+But a new paragraph needs to start with its own **block quote symbol**: Donec malesuada semper ex maximus sagittis. In hac habitasse platea dictumst. Ut eget pulvinar quam, in mollis orci. Ut efficitur urna eros, ac cursus tortor mollis quis. Sed elementum dapibus placerat. 
+
 # Tip - Internal heading links (bookmark anchors)
 
 To link internally to the "**## Git remote branch commands**" h2 heading enter:
