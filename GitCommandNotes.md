@@ -311,6 +311,23 @@ For sites that require credentials, if they are not configured/stored you will b
 
 # Issues/Errors and Solutions
 
+## CRLF Conversion and Warnings
+
+### Turn of Warnings
+
+Did this on 2018-09-07
+
+```
+git config --global core.safecrlf false
+```
+
+### Consider Disabling the Conversion
+
+From StatckOverflow
+
+You should use core.autocrlf input and core.eol input. Or just don't let git change the line endings at all with autocrlf false and get rid of highlighting of crlfs in diffs, etc with core.whitespace cr-at-eol.
+
+
 ## Error bad signature - fatal: index file corrupt
 
 **Error Message**
