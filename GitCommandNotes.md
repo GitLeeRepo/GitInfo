@@ -180,6 +180,7 @@ Note this will detect if the remote is ahead, but will also trigger for a local 
 
 ## Git push to remote
 
+* **git push -u origin newbranch** -- pushes a **new branch** on the **local** to the **remote** creating the **new branch on the remote**.  Can confirm this works from using it.
 * **git push \<remote name or URL\> \<local branch name\>** - for example **git push origin master** pushes your master branch to the remote. The branch name is optional, if excluded it will be your current branch.  Will create a branch with the same name on the remote.
 * **git push \<remote name or URL\> \<local branch name\>:\<remote branch name\>** - will push your local branch to the remote giving it the remote branch name specified.
 
