@@ -14,6 +14,25 @@ Contains notes on using the Markdown file format.
 Format: ![Alt Text](url)
 ```
 
+# Inline HTML
+
+You can **embed inline HTML** for many HTML tags.
+
+## HTML Table for Side-by-Side Images
+
+```html
+<table style="width:100%">
+  <tr style="padding:4px; margin:0;">
+    <td style="padding:2px; margin:0;">
+      <img src="/Images/DockerVmCompareVm01.png" alt="DockerVmCompareVm01" width="448" height="448">
+    </td>
+    <td style="padding:2px; margin:0;">
+      <img src="/Images/DockerVmCompareDocker01.png" alt="DockerVmCompareDocker01" width="448" height="448">
+    </td>
+  </tr>
+</table>
+```
+
 # Block Quotes
 
 Note that when using **block quotes** with the **\>** at the beginning of the line, it is not necessary to put in **line feeds**.  One **\>** symbol will be sufficient for text that wraps from one line to the next.   Keep in mind that a new paragraph needs to start with its own **block quote symbol**
