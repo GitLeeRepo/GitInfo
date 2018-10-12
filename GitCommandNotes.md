@@ -169,7 +169,7 @@ Note this will detect if the remote is ahead, but will also trigger for a local 
 
 ## Changing the URL of a remote repository
 
-* **git remote set-URL origin \<remote URL\>** - replace any current URL with the specified one for the specified remote (origin in this case)
+* **git remote set-url origin \<remote URL\>** - replace any current URL with the specified one for the specified remote (origin in this case)
 
 ## Remote Fetching (clone, fetch, merge, pull)
 
