@@ -366,4 +366,6 @@ git --version
 
 Note: after the **apt-get update** I ran **sudo apt-get upgrade** instead of **sudo apt-get install git -y**.
 
+On the **Linux Subshell for Windows** I had version **2.7.4**, which was the most recent version available with the default **apt** repository, even though it was **3 years old**.  Atfer adding the above **ppa:git-core/ppa** repository and upgrading I was on the most recent **2.19.1** as of **2018-10-12**.
+
 
