@@ -134,7 +134,7 @@ Note that if you use a wildcard for filename you need to proceed the wild card w
 
 ## Displaying remote repositories
 
-* **git remote -v** - get a list of remote repositories and their URLs that were previously added with either a **git clone \<remote URL\>** or a **git remote add \<Remote Name\> \<remote URL\>** command.  The -v argument specifies that the URLs should be included, otherwise it's just the remote name.
+* **git remote -v** - get a list of remote repositories and their URLs that were previously added with either a **git clone \<remote url\>** or a **git remote add \<Remote Name\> \<remote url\>** command.  The -v argument specifies that the URLs should be included, otherwise it's just the remote name.
 
 ## Check remote status
 
@@ -165,30 +165,30 @@ Note this will detect if the remote is ahead, but will also trigger for a local 
 
 ## Adding Remote name references
 
-* **git remote add \<remote name\> \<remote URL\>** - the shorter \<remote name\> can now be used to refer to the remote instead of the URL, in for example push and pull commands.
+* **git remote add \<remote name\> \<remote url\>** - the shorter \<remote name\> can now be used to refer to the remote instead of the URL, in for example push and pull commands.
 
 ## Changing the URL of a remote repository
 
-* **git remote set-url origin \<remote URL\>** - replace any current URL with the specified one for the specified remote (origin in this case)
+* **git remote set-url origin \<remote url\>** - replace any current URL with the specified one for the specified remote (origin in this case)
 
 ## Remote Fetching (clone, fetch, merge, pull)
 
-* **git clone \<remote URL\>** - get a remote repo cloned to local repository.  It will create the repository, so don't use this if the repository already exists locally.  Refer to clone comments above for more details.
-* **git fetch \<remote name or remote URL\>** - brings any remote changes into your repository (.git) but not your working directory, you must merge or pull to do that.  This is useful to see what changes have taken place on the remote since you cloned or pulled.
+* **git clone \<remote url\>** - get a remote repo cloned to local repository.  It will create the repository, so don't use this if the repository already exists locally.  Refer to clone comments above for more details.
+* **git fetch \<remote name or remote url\>** - brings any remote changes into your repository (.git) but not your working directory, you must merge or pull to do that.  This is useful to see what changes have taken place on the remote since you cloned or pulled.
 * **git merge origin/\<branchname\>**
 * **git pull origin** - Does both a fetch and a merge so your working directory is updated as well as your .git repository location.
 
 ## Git push to remote
 
 * **git push -u origin newbranch** -- pushes a **new branch** on the **local** to the **remote** creating the **new branch on the remote**.  Can confirm this works from using it.
-* **git push \<remote name or URL\> \<local branch name\>** - for example **git push origin master** pushes your master branch to the remote. The branch name is optional, if excluded it will be your current branch.  Will create a branch with the same name on the remote.
-* **git push \<remote name or URL\> \<local branch name\>:\<remote branch name\>** - will push your local branch to the remote giving it the remote branch name specified.
+* **git push \<remote name or url\> \<local branch name\>** - for example **git push origin master** pushes your master branch to the remote. The branch name is optional, if excluded it will be your current branch.  Will create a branch with the same name on the remote.
+* **git push \<remote name or url\> \<local branch name\>:\<remote branch name\>** - will push your local branch to the remote giving it the remote branch name specified.
 
 Note that if the remote branch has been changed by someone else since you last pulled then this will not work.  You have to first pull and merge their changes into your changes and then attempt to push again.
 
 ## Show remote info
 
-* **git remote show \<remote name or URL\>** - displays info on the remote repository such as the fetch and push URLs, what remote branches there are and whether it is tracked, what remote branch your master pulls from (ex remote master) and what remote branch your master pushes to (ex remote master)
+* **git remote show \<remote name or url\>** - displays info on the remote repository such as the fetch and push URLs, what remote branches there are and whether it is tracked, what remote branch your master pulls from (ex remote master) and what remote branch your master pushes to (ex remote master)
 
 ## Renaming a remote
 
