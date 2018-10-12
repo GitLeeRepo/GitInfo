@@ -348,3 +348,22 @@ git reset
 **Comment**
 
 This error occurred with an **Unreal Engine 4 Project** after a computer crash.  Running the commands above fixed it.
+
+# Upgrading git
+
+## Linux
+
+### Adding Git to Ubuntu Repository
+
+You can get a more recent version of **git** by adding the **ppa:git-core/ppa** repository to **apt**
+
+```bash
+sudo add-apt-repository ppa:git-core/ppa -y
+sudo apt-get update
+sudo apt-get install git -y
+git --version
+```
+
+Note: after the **apt-get update** I ran **sudo apt-get upgrade** instead of **sudo apt-get install git -y**.
+
+
