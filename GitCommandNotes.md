@@ -109,7 +109,7 @@ Note that if you use a wildcard for filename you need to proceed the wild card w
 
 * **git mv \<oldname\> \<newname\>**
 
-	Note that if you renamed the file outside of git then you need to do a **git rm \<oldname\>** followed by **git add \<newname\>**.
+  Note that if you renamed the file outside of git then you need to do a **git rm \<oldname\>** followed by **git add \<newname\>**.
 
 # Unstaging a file
 

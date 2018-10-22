@@ -19,7 +19,7 @@ Contains notes on GitHub specific commands
 * **Shift Ctrl-G** - Find previous
 * **Shift Ctrl-F** - Replace
 * **Shift Ctrl-R** - Replace all
-* **Alt-G**	- Jump to line
+* **Alt-G**  - Jump to line
 * **Ctrl-Z** - 1Undo
 * **Ctrl-Y** - Redo
 
