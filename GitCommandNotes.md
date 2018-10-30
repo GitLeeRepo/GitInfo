@@ -115,6 +115,11 @@ Note that if you use a wildcard for filename you need to proceed the wild card w
 
 * **git reset HEAD \<filename\>**
 
+```bash
+# unstage all the files
+git reset HEAD *
+```
+
 # Reverting a file -  Discard changes
 
 * **git checkout -- \<filename\>** - will replace the modified file with the file from the last commit.  Note the **two dashes** after **checkout** are part of the command and need to be **included**.
@@ -129,7 +134,12 @@ Note the **two dashes** after the **checkout**.
 
 Note: if you run this command, for example **`git checkout *`**, and it doesn't remove the **working directory files**, it likely indicates you **never previously committed them**.  In this case, simply **delete the files** using **rm**.
 
-Also note that if you have **staged** some of the files that you want to **remove with checkout** then you need to **unstage them first**.
+Also note that if you have **staged** some of the files that you want to **remove with checkout** then you need to **unstage them first** with **`git reset HEAD <filename>`**.
+
+```bash
+# unstage all the files
+git reset HEAD *
+```
 
 # Git commit
 
