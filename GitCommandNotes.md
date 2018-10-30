@@ -117,7 +117,19 @@ Note that if you use a wildcard for filename you need to proceed the wild card w
 
 # Reverting a file -  Discard changes
 
-* **git checkout -- \<filename\>** - will replace the modified file with the file from the last commit.
+* **git checkout -- \<filename\>** - will replace the modified file with the file from the last commit.  Note the **two dashes** after **checkout** are part of the command and need to be **included**.
+
+This is useful when you get a **merge error** during **git pull** informing you that you have **untracked changes**.  If you don't want to keep any of the changes on the **local host** then run this command.
+
+```bash
+git checkout -- * 
+```
+
+Note the **two dashes** after the **checkout**.
+
+Note: if you run this command, for example **`git checkout *`**, and it doesn't remove the **working directory files**, it likely indicates you **never previously committed them**.  In this case, simply **delete the files** using **rm**.
+
+Also note that if you have **staged** some of the files that you want to **remove with checkout** then you need to **unstage them first**.
 
 # Git commit
 
