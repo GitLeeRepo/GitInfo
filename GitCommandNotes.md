@@ -346,7 +346,7 @@ git config --global core.safecrlf false
 
 ### Consider Disabling the Conversion
 
-From StatckOverflow:
+From StackOverflow:
 
 >You should use **core.autocrlf input** and **core.eol input**. Or just don't let git change the line endings at all with **autocrlf false** and get rid of highlighting of crlfs in diffs, etc with **core.whitespace cr-at-eol**.
 
@@ -388,6 +388,6 @@ git --version
 
 Note: after the **apt-get update** I ran **sudo apt-get upgrade** instead of **sudo apt-get install git -y**.
 
-On the **Linux Subshell for Windows** I had version **2.7.4**, which was the most recent version available with the default **apt** repository, even though it was **3 years old**.  Atfer adding the above **ppa:git-core/ppa** repository and upgrading I was on the most recent **2.19.1** as of **2018-10-12**.
+On the **Linux Subsystem for Windows** I had version **2.7.4**, which was the most recent version available with the default **apt** repository, even though it was **3 years old**.  After adding the above **ppa:git-core/ppa** repository and upgrading I was on the most recent **2.19.1** as of **2018-10-12**.
 
 
