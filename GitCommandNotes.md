@@ -27,32 +27,6 @@ Note the precedence for these files.  The local takes highest precedence, then t
 
 An example of what's stored here is the **user.name** and **user.email** settings.
 
-# Git config
-
-You can either change the **global configurations** using the **commands** in this section, or you can **edit** the **.gitconfig** file in your **home directory** (applies to both **Linux** and **Windows**).
-
-```bash
-git config --global --edit
-# should be equivalent to
-vi ~/.gitconfig
-```
-
-## Username and email config settings
-
-* **git config --global user.name="\<username\>"** - set username
-* **git config --global user.name** - display username
-* **git config --global user.email="\<email\>"** - set email
-* **git config --global user.email** - display email
-
-## Configure editor to be used by git
-
-* **git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"**
-* **git config --global core.editor** - display the currently set editor
-
-## Display config settings
-
-* **git config --list** 
-
 # .gitignore
 
 * The files and directories listed in .gitignore will not be added to the repository.  An example of a filename and directory entry in .gitignore (notice the directory name has a forward slash after it:
@@ -293,7 +267,59 @@ Note that tags are not automatically pushed to the remote when you do a push.  Y
 * **git push origin \<tagname\>**
 * **git push origin --tags** - will push all your tags in your current repository to the remote server.
 
-# Configuration
+# Configuration Commands ad Files
+
+Refer to:
+
+* [git config command docs](https://git-scm.com/docs/git-config)
+* [gitattributes docs](https://git-scm.com/docs/gitattributes)
+
+## Display configuration settings
+
+* **`git config --list`** -- list all configuration settings (system, global, local)
+* **`git config --local --list`** -- list local (current repository) configuration settings
+* **`git config --global --list`** -- list global (current user) configuration settings
+* **`git config --system --list`** -- list system (all users) configuration settings
+* **`git check-attr -a .`** -- display all the **.gitattributes** settings for the **current folder** (must be the **repository root** when using just the **dot** reference, otherwise provide the **path**)
+
+Note: On **Windows** the **--system** had several configurations, while on **Linux** the **/etc/gitconfig** did not exist, which is fine since I am the only user.
+
+## .gitattributes
+
+Refer to:
+
+* [gitattributes docs](https://git-scm.com/docs/gitattributes)
+
+The **.gitattributes** file is placed in the **root** of the **repository** and contains **custom settings** that apply to that repository.  It uses the following **syntax**:
+
+```
+pattern	attr1 attr2 ...
+```
+
+Where **pattern** is a **path/name** of particular **file pattern**, including **wildcards** such as **`*`**.  Examples include:
+
+```
+*           text=auto
+*.txt       text
+*.vcproj    text eol=crlf
+*.sh        text eol=lf
+*.jpg       -text
+```
+
+This will ensure that **eol** is handled **automatically** for all files, which means the **.txt** will be **crlf** on Windows, and **lf** on all other systems, with overrides for explicit file endings (**crlf for .vcproj**, **lf for .sh**), with **.jpg** files being **excluded from normalization**.
+
+In addition to **editing the .gitattributes** in the **repository root** you can run the **git check-attr -a <path>`** command to view the **settings**.
+
+## Local Configuration
+
+Contains settings such as:
+
+* remote.origin.url=
+* remote.origin.fetch=
+* branch.master.remote=origin
+* branch.master.merge=refs/heads/master
+
+## Global Configuration
 
 You can either change the **global configurations** using the **commands** in this section, or you can **edit** the **.gitconfig** file in your **home directory** (applies to both **Linux** and **Windows**).
 
@@ -303,23 +329,17 @@ git config --global --edit
 vi ~/.gitconfig
 ```
 
-## Config global user and email
+### Username and email config settings
 
-### Set username
+* **git config --global user.name="\<username\>"** - set username
+* **git config --global user.name** - display username
+* **git config --global user.email="\<email\>"** - set email
+* **git config --global user.email** - display email
 
-* **git config --global user.name "\<username\>"**
+### Configure editor to be used by git
 
-### Show username
-
-* **git config --global user.name**
-
-### Set email
-
-* **git config --global user.email "\<email\>"**
-
-### Show email
-
-* **git config --global user.email**
+* **git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"**
+* **git config --global core.editor** - display the currently set editor
 
 ## Credentials
 
@@ -348,13 +368,15 @@ For sites that require credentials, if they are not configured/stored you will b
   ````
   In this case your credentials will be stored in the cache for an hour in the first case and 15 minutes (900 seconds)
 
-# Issues/Errors and Solutions
+## CRLF Conversion, Warnings and Strategy
 
-## CRLF Conversion and Warnings
+### Strategy
+
+For the most part I try to stick to just using **lf**, including on **Windows**, particularly for **Markdown** files.  I think this is probably best handled by placing the following in the **.gitattributes** file in the appropriate **repository roots**.
 
 ### Turn of Warnings
 
-Did this on 2018-09-07
+Did this on 2018-09-07 for the **Linux Subsystem for Windows**, but it is still applied when running for **Windows** itself.
 
 ```
 git config --global core.safecrlf false
@@ -365,6 +387,8 @@ git config --global core.safecrlf false
 From StackOverflow:
 
 >You should use **core.autocrlf input** and **core.eol input**. Or just don't let git change the line endings at all with **autocrlf false** and get rid of highlighting of crlfs in diffs, etc with **core.whitespace cr-at-eol**.
+
+# Issues/Errors and Solutions
 
 
 ## Error bad signature - fatal: index file corrupt
@@ -386,6 +410,10 @@ git reset
 **Comment**
 
 This error occurred with an **Unreal Engine 4 Project** after a computer crash.  Running the commands above fixed it.
+
+## Inconsistencies between how Windows and Linux Subsystem for Windows view the same repository directory
+
+Sometimes I run into the situation where **Windows** shows files as **modified** and the **Linux Subsystem** does not.  This is on the same actual files and directories.  This is likely due to the **crlf** issue between Windows checkout and Linux checkouts, where git will try to add the **cr** on **checkout**, and remove it on **check in**.  It try to minimize this by using **lf only** on both Windows and Linux.  Many editors handle **lf** only files fine on Windows.
 
 # Upgrading git
 
