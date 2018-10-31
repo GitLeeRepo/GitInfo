@@ -29,6 +29,14 @@ An example of what's stored here is the **user.name** and **user.email** setting
 
 # Git config
 
+You can either change the **global configurations** using the **commands** in this section, or you can **edit** the **.gitconfig** file in your **home directory** (applies to both **Linux** and **Windows**).
+
+```bash
+git config --global --edit
+# should be equivellent to
+vi ~/.gitconfig
+```
+
 ## Username and email config settings
 
 * **git config --global user.name="\<username\>"** - set username
