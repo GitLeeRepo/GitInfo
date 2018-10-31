@@ -295,6 +295,14 @@ Note that tags are not automatically pushed to the remote when you do a push.  Y
 
 # Configuration
 
+You can either change the **global configurations** using the **commands** in this section, or you can **edit** the **.gitconfig** file in your **home directory** (applies to both **Linux** and **Windows**).
+
+```bash
+git config --global --edit
+# should be equivalent to
+vi ~/.gitconfig
+```
+
 ## Config global user and email
 
 ### Set username
