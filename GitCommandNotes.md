@@ -33,7 +33,7 @@ You can either change the **global configurations** using the **commands** in th
 
 ```bash
 git config --global --edit
-# should be equivellent to
+# should be equivalent to
 vi ~/.gitconfig
 ```
 
