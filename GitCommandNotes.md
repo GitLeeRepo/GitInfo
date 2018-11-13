@@ -331,9 +331,9 @@ vi ~/.gitconfig
 
 ### Username and email config settings
 
-* **git config --global user.name="\<username\>"** - set username
+* **git config --global user.name "\<username\>"** - set username
 * **git config --global user.name** - display username
-* **git config --global user.email="\<email\>"** - set email
+* **git config --global user.email "\<email\>"** - set email
 * **git config --global user.email** - display email
 
 ### Configure editor to be used by git
