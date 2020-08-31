@@ -33,6 +33,12 @@ You can **embed inline HTML** for many HTML tags.
 </table>
 ```
 
+## Sizeable HTML Image Tag
+
+<img src="/Guitar/Theory/ScalesKeysAndModes/Scales/images/Diagrams/MinorPentatonicPattern1_v01.svg" alt="MinorPentatonicPattern1_v01" width="256">
+
+* Note this only provides the **width** which will **proportionally** adust the **height**.  You can also provide the **height** if desired.
+
 # Block Quotes
 
 Note that when using **block quotes** with the **\>** at the beginning of the line, it is not necessary to put in **line feeds**.  One **\>** symbol will be sufficient for text that wraps from one line to the next.   Keep in mind that a new paragraph needs to start with its own **block quote symbol**
