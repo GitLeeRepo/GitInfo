@@ -35,7 +35,9 @@ You can **embed inline HTML** for many HTML tags.
 
 ## Sizeable HTML Image Tag
 
+```html
 <img src="/Guitar/Theory/ScalesKeysAndModes/Scales/images/Diagrams/MinorPentatonicPattern1_v01.svg" alt="MinorPentatonicPattern1_v01" width="256">
+```
 
 * Note this only provides the **width** which will **proportionally** adust the **height**.  You can also provide the **height** if desired.
 
