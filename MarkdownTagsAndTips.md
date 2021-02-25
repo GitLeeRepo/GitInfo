@@ -33,7 +33,17 @@ You can **embed inline HTML** for many HTML tags.
 </table>
 ```
 
-## Sizeable HTML Image Tag
+## HTML Image Tag
+
+### Basic Image Tag
+
+```html
+<img src="/Guitar/Theory/ScalesKeysAndModes/Scales/images/Diagrams/MinorPentatonicPattern1_v01.svg">
+```
+
+* Note this will display the image at its current size, it makes no attempt to resize it.
+
+### Sizeable HTML Image Tag
 
 ```html
 <img src="/Guitar/Theory/ScalesKeysAndModes/Scales/images/Diagrams/MinorPentatonicPattern1_v01.svg" alt="MinorPentatonicPattern1_v01" width="256">
